@@ -63,7 +63,7 @@ All files are snapshots from 25 October 2026, stored in `data/raw/` so the resul
 
 ![Failure rate by track record](images/history_vs_failure.png)
 
-Restaurants whose last routine score was 42 or more fail again **36%** of the time, against **12%** after an A-range score. Restaurants cited for pests before fail **23%** of the time vs **13%**. In the model, earlier violation types and earlier scores are by far the most important inputs:
+Restaurants whose last routine score was 42 or more fail again **36%** of the time, against **12%** after an A-range score. Restaurants cited for pests before fail **23%** of the time vs **13%**. In the model, earlier violation types and earlier scores are the most important inputs, followed by the type of restaurant:
 
 ![What the model relies on](images/feature_importance.png)
 
@@ -99,7 +99,7 @@ Restaurants in the ZIP codes with the highest earlier failure rates fail 24% of 
 
 ![Neighborhood and complaints](images/context_vs_failure.png)
 
-Failure rates vary block by block rather than along borough lines, with clusters in parts of Queens and south Brooklyn:
+Failure rates vary block by block rather than along borough lines, with the highest-failure ZIP codes concentrated in Queens (Flushing, Jackson Heights, Elmhurst) and parts of central Brooklyn:
 
 ![Map of failure rates](images/failure_map.png)
 
@@ -123,7 +123,7 @@ The stronger models perform almost identically, so the limit is the information 
 
 ![Failure rate by risk group](images/risk_deciles.png)
 
-In the test period, the 10% of restaurants the model rated riskiest failed **42%** of the time; the 10% rated safest failed **7%** of the time. Individual results are still uncertain: in the test period, even the single highest-risk restaurant passed. The model is a tool for **prioritizing** visits, not for judging any single restaurant.
+In the test period, the 10% of restaurants the model rated riskiest failed **42%** of the time; the 10% rated safest failed **6%** of the time. Individual results are still uncertain: in the test period, even the single highest-risk restaurant passed. The model is a tool for **prioritizing** visits, not for judging any single restaurant.
 
 ##### What this means for the Health Department
 
@@ -133,7 +133,7 @@ In the test period, the 10% of restaurants the model rated riskiest failed **42%
 | **Move high-risk inspections ahead of summer** | Summer inspections have 50% higher odds of a serious failure |
 | **Follow up early with repeat pest offenders** | Each earlier pest visit raises the odds by about a fifth |
 | **Show the reasons behind each ranking** | The model is transparent, which supports fairness and lets owners know what to fix |
-| **Retrain the model at least every quarter** | Failure rates were higher in 2026 than in earlier years, so the model's risk levels drift if it is not updated |
+| **Retrain the model at least every quarter** | Failure rates for the same months rose each year from 2024 to 2026, so the model's risk levels drift if it is not updated |
 
 #### Next steps
 
