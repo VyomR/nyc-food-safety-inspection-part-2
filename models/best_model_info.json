@@ -1,0 +1,39 @@
+{
+  "model": "Logistic regression",
+  "best_hyperparameters": {
+    "C": 0.01,
+    "class_weight": null
+  },
+  "numeric_features": [
+    "prev_cycle_score",
+    "prev_cycle_fail",
+    "days_since_prev_cycle",
+    "last_score",
+    "prior_mean_score",
+    "last_n_critical",
+    "last_had_pest",
+    "prior_pest_visits",
+    "prior_temperature_visits",
+    "prior_hygiene_visits",
+    "prior_no_fpc_visits",
+    "prior_closed_visits",
+    "n_prior_inspections",
+    "days_since_last_inspection",
+    "has_prior_inspection",
+    "chain_size",
+    "is_chain",
+    "zip_prior_fail_rate",
+    "rodent_complaints_zip_3m",
+    "food_complaints_bbl_12m",
+    "score_trend"
+  ],
+  "categorical_features": [
+    "boro",
+    "cuisine_group",
+    "inspection_month",
+    "inspection_dow"
+  ],
+  "train_cutoff_date": "2026-04-06",
+  "cv_pr_auc": 0.3022,
+  "test_pr_auc": 0.357
+}
